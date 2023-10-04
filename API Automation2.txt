@@ -204,11 +204,23 @@ Delete order
 Delete order
 
 ----------------------------build framework---------------------------------------------------------------------
-RestAssured Testing 
-Serialization & Deserialization using POJO
-Request and Response spec Buidler
-Cucumber Framework
-Maven buikd managment tools basics
+Project Details :
+
+Project-Complete-Automation-API-Framework 
+
+Rest Assured Testing Framework
+
+Serialization and deserialization using POJO
+
+Request and Response spec Builder
+
+Cucumber Tool for BDD Framework
+
+Maven builds management tools and basics
+
+Git Commands and GitHub as source control 
+
+Jenkins for continued integration and delivery
 
 project structure  /src 
                        /java 
@@ -265,8 +277,8 @@ remove /classifications from pom.xml to generate the html file
 3.password : deab25c6930d469d963aacf83d8291af
 4. open localhost:8080  
 user name :  Eslam
-password:    Acac123456
-Full name:	 Eslam Lotfy 
+password:    
+Full name:	  
 Jenkins URL: http://localhost:8080/
 5.create New job > create New item  > fress style project
 6. General  > advanced >  User  Custom workSpace > add your project path 
@@ -292,14 +304,43 @@ git commit -m "first commit"      //////    commit phase
 git remote add origin   ???       //////    address of githup repository 
 git push origin master         /////   master branch    
 
+--------------------------------------git clone---------------------
+userY
+open githup
+git clone      //download files from server into local
+add your changes 
+git add .
+git commit -m "commits from userY"
+git remote add origin ???
+git push origin master
+
+-----------------------------git pull------------------------
+after userY pushchange
+git pull origin master
+-----------------------------Cucumber Allure Report Java---------------------------------
+Step 1: Add following Maven dependency or you can check the latest one from here for Cucumber Version 7
+<!-- https://mvnrepository.com/artifact/io.qameta.allure/allure-cucumber7-jvm -->
+<dependency>
+    <groupId>io.qameta.allure</groupId>
+    <artifactId>allure-cucumber7-jvm</artifactId>
+    <version>2.17.2</version>
+</dependency>
+
+Step 2: Add following plugin in Test Runner Class:
+plugin = { "pretty", "io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm"}
+
+Step 3: Execute your test using maven test
+mvn test
 
 
+to fix allure commmands
+npm install -g allure-commandline --save-dev
 
+Download and extract allure-commandline-2.24.0
+Add C:\allure-commandline-2.24.0\allure-2.24.0\bin To enviroment PATH
 
-
-
-
-
+Step 4: Navigate to your project directory and type
+allure serve allure-results
 
 
 
