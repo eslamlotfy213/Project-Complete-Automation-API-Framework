@@ -1,309 +1,97 @@
-"# Project-Complete-Automation-API-Framework" 
 
+# Project-Complete-Automation-API-Framework project.
 
-Rest API Testing (Automation) from Scratch-Rest Assured Java
-client server 
-presentation layer +  UI 
-business logic layer application logic
-database layer    
-Understanding GET, POST, PUT DELETE Http Crud operations of API
+✨ Project # 7✨
 
------------------------------------------------------------------------------------------------------------
-Endpoint 
-BaseURL/recesourcs/(path-query)paramter
-install postman
-----------------------------------------------------------------------------------------------------------
-Rest assured 
-java based library used to test restful api / web services
-install java and set system variables
-install eclips create maven project
-configure rest assured jars into project
+📅 Project Date: Oct 05, 2023
 
------steps------------------------------------------------------------------------------------------------------
-https://www.oracle.com/eg/java/technologies/downloads/
-Java SE Platform and JDK 17 LTS is the latest long-term support release for the Java SE platform.
-JDK 17 
-install java 17 version has long support
-programms files > java
+✨ Rest Assured Practice ==> API Test Automation ✨
 
-1.add JAVA_HOME : C:\Program Files\Java\jdk-18.0.1.1
-2.add into path   Edit > New and add then ok C:\Program Files\Java\jdk-18.0.1.1\bin
-CMD >  java -version
-
-install eclips editor code
-https://www.eclipse.org/downloads/  >  Download Packages  > https://www.eclipse.org/downloads/packages/
-
-install maven project
-<!-- https://mvnrepository.com/artifact/io.rest-assured/rest-assured -->
-<dependency>
-    <groupId>io.rest-assured</groupId>
-    <artifactId>rest-assured</artifactId>
-    <version>5.3.2</version>
-    <scope>test</scope>
-</dependency>
-
-<!-- https://mvnrepository.com/artifact/org.testng/testng -->
-<dependency>
-    <groupId>org.testng</groupId>
-    <artifactId>testng</artifactId>
-    <version>7.8.0</version>
-    <scope>test</scope>
-</dependency>
-
-<!-- https://mvnrepository.com/artifact/org.hamcrest/hamcrest -->
-<dependency>
-    <groupId>org.hamcrest</groupId>
-    <artifactId>hamcrest</artifactId>
-    <version>2.2</version>
-    <scope>test</scope>
-</dependency>
-
-
-----------------------------------------------------
-priciplaces"
-use it to import import static io.restassured.RestAssured.*;
-given when then
-
-
-give   > inputs queryparamter , body , header , 
-when   > resources  & http methods 
-then   > Validation response ,assertThat().statusCode(200).body("msg",equalTo("Address successfully updated"));
-
-import io.restassured.RestAssured;
-import static io.restassured.RestAssured.*;
-import static org.hamcrest.Matchers.equalTo;
-
-conver reponseo to string 
-conver string to json 
-----------------Example API------------------------
-- Google Maps API
-- Courses API
-- Library API
--------------------dataProvider----------------
-1.create methods for dataprovider
- @DataProvider(name = "BooksData")
-    public Object[][] getData()
-	{
-       return new Object[][]{{"abcd2","155"},{"jgfg","566"},{"bmbn","876"}};
-    }
-2.add @Test(dataProvider = "BooksData")
-3.add String str1, String str2
--------------------Json File External----------------
-Dyanamic payload from static methods
-Dynamic methods existing body 
-
-1.have json files
-2.convert to bytes Files.bytes(path.url("................................"))
-2.Convert bytes to String  new String ( Files.bytes(path.url("................................")) )
-body(Files.readAllBytes(Paths.get("src/main/java/JsonFiles/Addbody.json")
--------------------Real Example----------------
-- Setting up Jira API
-- Download Jira 
-- Get started 
-- Select release
-- orgainztion : eslamlotfy213
-BGNV-E2XM-WLMJ-4AQQ
-Your Jira instance can be accessed through any web browser if you enter this 
-address: http://localhost:8080/secure/WelcomeToJIRA.jspa.
-
-Link: http://localhost:8080/secure/RapidBoard.jspa?rapidView=1&projectKey=RSA&view=planning.nodetail&issueLimit=100#
-How to run server
-Search on google : REST APIs  : https://docs.atlassian.com/software/jira/docs/api/REST/9.7.2/#api/2/issue-createIssue
-Step 1. Create a new session using the Jira REST API : https://developer.atlassian.com/cloud/jira/platform/jira-rest-api-cookie-based-authentication/
-----------------------------------------------------
-create new project on jira
-get the key :RES
-important : 
-1. use it SessionFilter sessionFilter = new SessionFilter();
-2. use it filter(sessionFilter)
--------------------------------------------------------
-.queryParam("key","qaclick123")
-.pathParam("id","10004")
----------------add attachmet--------------------------------
-use .header("Content-Type","multipart/form-data")
-use .multiPart("file",new File("src/main/java/jira/file.txt")
----------------------------------------------------------------
-urlEncodingEnabled(false)
--> use to encoding
----------------OAuth2.0----------------------------------------
-industrty protocl
-handle google/facebook oauth authorization grant types
-intergation between UI automation and restassured 
-
-1 get code from browser
-2 get access token 
-3 actual request
-
-https://rahulshettyacademy.com/getCourse.php?code=
-4%2F0AfJohXnxVN77jySNlI-ff1IA3VrxE7NpPr9fCalOQCpD_DW8WTYfSspP_c20Ee98h6dAUg
-&scope=email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+openid&authuser=1&prompt=consent
-
-- splite the string
-- Login with gmail 
-
--------------------------------------------------------------------------------------------------------------------
-authorization code  ->need more steps as human perform
-client credentials   ->no need more steps when application request own data
-----------------------------------serlization--------setter------------------------------------------------------------------
-converting java object into -> request json payload          
-
-----------------------------------deserlization---------getter--------------------------------------------------------------
-converting response into java object
-
-library used: 
-jakson Datablind
-jakson annotation
-jakson core
-Gson
-
-using >> .expect().defaultParser(Parser.JSON)
+🌐 GooglemapsApi 
 
 
 
-<!-- https://mvnrepository.com/artifact/com.google.code.gson/gson -->
-<dependency>
-    <groupId>com.google.code.gson</groupId>
-    <artifactId>gson</artifactId>
-    <version>2.10.1</version>
-</dependency>
+📝 The main Frameworks included in the project:
 
-<!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind -->
-<dependency>
-    <groupId>com.fasterxml.jackson.core</groupId>
-    <artifactId>jackson-databind</artifactId>
-    <version>2.15.2</version>
-</dependency>
+Rest Assured 
 
-<!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-core -->
+Serialization and deserialization using POJO
 
-<dependency>
-    <groupId>com.fasterxml.jackson.core</groupId>
-    <artifactId>jackson-core</artifactId>
-    <version>2.15.2</version>
-</dependency>
+Request and Response spec Builder
 
-<!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-annotations -->
-<dependency>
-    <groupId>com.fasterxml.jackson.core</groupId>
-    <artifactId>jackson-annotations</artifactId>
-    <version>2.15.2</version>
-</dependency>
-------------------------------------------------------------------------------------------------------------------------
->      request spec builder 
->      responce spec builder 
-serializarion 
-deserializarion 
-spec builder
------E2E ecommerce-----------------------------------------------------------------------------------------------------
-Website:https://rahulshettyacademy.com/client/dashboard/dash
-email : dexcomnew98@gmail.com
-pass : User123#
-
-URL : 
-Login
-Create product 
-pursgase order
-Delete order 
-Delete order
-
-----------------------------build framework---------------------------------------------------------------------
-RestAssured Testing 
-Serialization & Deserialization using POJO
-Request and Response spec Buidler
 Cucumber Framework
-Maven buikd managment tools basics
 
-project structure  /src 
-                       /java 
-					         /Test 
-packages >>>>> fearures
-                        /placevalidation.feature
-packages >>>>> stepdefinitios
-                             /stepdefinition Class extends Utilities Class
-packages >>>>> CucumberOptions
-                             /TestRunner Class
-packages >>>>> TestDataFiles  
-                             /TestData	Class > addPayload() Method						   
-packages >>>>> pojo
-                     /AddPlace Class
-					 /Location Class
-packages >>>>> utilities
-                        /Utilities Class > Startrequest() Method
-						/Global.properties
-						
-using >>>> PrintStream log = new PrintStream(new File("./Logging.txt"));						
-    .addFilter(RequestLoggingFilter.logRequestTo(log))
-    .addFilter(ResponseLoggingFilter.logResponseTo(log))
+Maven build management tools basics
 
-using >>>> Global.properties
+Junit
 
-using >>>>> DataDrivern > Example Feature
+Cucumber Report
 
-Run with  mvn test  to complie and  tests 
-Run with  mvn compile to compile only   
-
-------------------------maven command-------------------------------------------
-run @AddPlace
-mvn test -D cucumber.filter.tags="@AddPlace"
-
-run @DeletePlace
-mvn test -D cucumber.filter.tags="@DeletePlace"
-------------------cucumber HTML reporting------mvn test verif---------------------------
-phase 1 compile
-phase 2 test
-phase 3 verify 
-
-first add  plugin ="json:target/jsonReports/cucumber-report.json"  into testrunner
-secound  add plugin into POM.xml
-thrid   run mvn test verify
-
-=====================================================================================================================
-remove /classifications from pom.xml to generate the html file
---------------jenkins------------------------------------------------------------------------------------------------------------
-----------------------------------------Jenkins----------------------------------------------------------------
-----------------------------------------Jenkins----------------------------------------------------------------
-1.downlaod jenkins from https://www.jenkins.io/download/ Stable (LTS)  
-2.Go to folder of jenkins 
-2.open CMD and wrire java jar (file of jenkins)  ex : java -jar jenkins.war -httpPort=8080
-3.password : deab25c6930d469d963aacf83d8291af
-4. open localhost:8080  
-user name :  Eslam
-password:    Acac123456
-Full name:	 Eslam Lotfy 
-Jenkins URL: http://localhost:8080/
-5.create New job > create New item  > fress style project
-6. General  > advanced >  User  Custom workSpace > add your project path 
-7. Build   >  select execute windown batch command or invokde maven top level maven target 
-8. Gaol add you maven command
-===================================================================================================================
-==========================to solve problem of java 18===============================================================
-java -jar jenkins.war --enable-future-java
-========================================================================================================
-7. Build   >  select execute windown batch command  or invokce through maven 
-> test  -D cucumber.filter.tags="@DeletePlace"
-> test  -D cucumber.filter.tags="@AddPlace"
-
-
-8.paramter > add paramter > choice paramter 
-test verify -D cucumber.filter.tags="@AddPlace"
-mvn test -D cucumber.filter.tags="@"$tag""
-------------------------------------githup-------------------------------------------------------------------
-
-git init        		          //////////create initial local repository
-git add README.md 	              /////////// add * stadge phase
-git commit -m "first commit"      //////    commit phase
-git remote add origin   ???       //////    address of githup repository 
-git push origin master         /////   master branch    
+Allure Report 
 
 
 
 
+🎨 Project Design:
+
+Object Model design pattern
+
+Data Driven framework Cucumber Example keywords
+
+BDD framework 
+
+Java OOP
+
+
+
+🏗️ Project Structure:
+
+Maven Project
+
+           src / main / java
+
+           src / main / test
+
+
+
+🔊 this project included
+
+📦️ 1 packages in src/main/java
+
+pojo ( has AddPlace & Location classes are used to set and get data from Json data)
+
+
+
+📦️ 4 packages in src/test/java
+
+fucumber.Options (TestRunnner)
+
+feature (plcaeValidation.feature)
+
+resources (APIResources - globla.properties - TestDataBuild - Utils)
+
+stepDefinations (StepDefinations methods)
 
 
 
 
+⚗️ 2 xml files
+
+pom.xml ( XML file that contains information about the project and configuration details used by Maven to build the project)
+
+ 
+🧱Reports 
+Allure-results  > allure serve allure-results
+/target/jsonReports/cucumber-report.json > mvn test verify
 
 
+🔎 Take a look at my README.md file
+
+
+
+🌐GitHubLink: https://github.com/eslamlotfy213/Project-Complete-Automation-API-Framework
+
+#restassured #apiautomation #project #java #testng #datadriven 
 
 
 

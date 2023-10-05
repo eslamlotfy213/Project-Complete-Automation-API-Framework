@@ -9,11 +9,13 @@ public enum APIResources {
 	
 	APIResources(String resource)
 	{
+
 		this.resource=resource;
 	}
 	
 	public String getResource()
 	{
+
 		return resource;
 	}
 	

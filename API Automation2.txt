@@ -332,7 +332,6 @@ plugin = { "pretty", "io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm"}
 Step 3: Execute your test using maven test
 mvn test
 
-
 to fix allure commmands
 npm install -g allure-commandline --save-dev
 
