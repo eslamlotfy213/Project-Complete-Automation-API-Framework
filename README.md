@@ -29,6 +29,9 @@ Cucumber Report
 
 Allure Report 
 
+jenkins for Continuous Integration (CI) and Continuous Deployment (CD)
+
+Git / Github for source distributed version control system
 
 
 
@@ -74,7 +77,6 @@ stepDefinations (StepDefinations methods)
 
 
 
-
 ⚗️ 2 xml files
 
 pom.xml ( XML file that contains information about the project and configuration details used by Maven to build the project)
@@ -82,7 +84,11 @@ pom.xml ( XML file that contains information about the project and configuration
  
 🧱Reports 
 Allure-results  > allure serve allure-results
-/target/jsonReports/cucumber-report.json > mvn test verify
+Cucumber repors (/target/jsonReports/cucumber-report.json) 
+> mvn test verify
+> mvn test -D cucumber.filter.tags="@AddPlace"
+> mvn test -D cucumber.filter.tags="@DeletePlace"
+
 
 
 🔎 Take a look at my README.md file
