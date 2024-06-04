@@ -1,0 +1,38 @@
+https://mockapi.io/projects
+create project 
+URL > endpoint 
+resoueces > users 
+path param / query param
+
+
+
+
+Given > all information send body / header / parapmer / auth
+When  > resources + method post get put delete 
+Then  > outcome respomse body - status code 
+
+jpath 
+hamcrest
+------------------------------------------------------------------------------------------------------------
+// equalTo
+   assertThat().body("[0].name", is(equalTo("Wendell Grady")))
+// hasItem
+   assertThat().body('response body',hasItem(""))
+// hasItems
+   assertThat().body('response body',hasItems(""))  
+// contains    
+   should have exact order
+// containsanyorder 
+   should not have exact order
+// empty()
+   assertThat().body('name',empty()) 
+// hasSize(2) 
+// everyItem(startwith("2021"))
+//haskey
+    "[0]",hasKey("id")
+//hasValue
+    "[0]",hasValue("2001")
+//hasEntry
+  "[0]",hasEntry("kay","value")
+
+ 
